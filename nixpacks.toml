@@ -1,1 +1,6 @@
-cmd="python home.py"
+[start]
+cmd = "python home.py"
+
+[variables]
+PORT = "8080"
+PYTHONUNBUFFERED = "1"

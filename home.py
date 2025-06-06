@@ -144,6 +144,8 @@ if __name__ in {"__main__", "__mp_main__"}:
     ui.run(
         title='Multi-Page App with Floating Menu',
         favicon='🌟',
+        host='0.0.0.0',
         port=8080,
-        reload=False
+        reload=False,
+        show=False
     )
