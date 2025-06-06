@@ -31,7 +31,6 @@ class FloatingMenuApp:
         }
         self.content_container = None
         self.setup_app()
-        app.add_static_files('/static', 'static')  # This points to the static directory
 
     def setup_app(self):
         """Initialize the app with custom CSS and main layout"""
@@ -121,6 +120,9 @@ class FloatingMenuApp:
 
     def run(self):
         """Run the application"""
+        # Set up static files
+        app.add_static_files('/static', 'static')
+        
         # Create main layout
         with ui.column().classes('w-full min-h-screen'):
             # Floating menu
@@ -135,8 +137,8 @@ class FloatingMenuApp:
 
 # Create and run the app
 if __name__ in {"__main__", "__mp_main__"}:
-    app = FloatingMenuApp()
-    app.run()
+    app_instance = FloatingMenuApp()
+    app_instance.run()
     
     # Run the NiceGUI app
     ui.run(
