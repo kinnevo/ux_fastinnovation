@@ -1,7 +1,7 @@
 from nicegui import ui, app
 import asyncio
 
-class DesignThinkingApp:
+class DesignThinkingApp1:
     def __init__(self):
         self.current_step = 0
         self.design_steps = [
@@ -497,7 +497,7 @@ class DesignThinkingApp:
 
 # Create and run the app
 def main():
-    app = DesignThinkingApp()
+    app = DesignThinkingApp1()
     app.create_ui()
     
     ui.run(
